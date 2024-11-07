@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafik Persamaan dan Pertidaksamaan Linear Satu Variabel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1var.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Grafik Persamaan dan Pertidaksamaan Linear Satu Variabel</h1>
+    <p>Masukkan persamaan atau pertidaksamaan dalam bentuk <code>ax + b = c</code>, <code>ax + b &lt; c</code>, dll.</p>
+    <textarea id="equations" rows="5" placeholder="Masukkan persamaan di sini..."></textarea>
+    <br>
+    <button onclick="plotGraph()">Gambarkan Grafik</button>
+    <div class="canvas-container">
+        <canvas id="linearGraph"></canvas>
+    </div>
+    <button onclick="window.location.href='index.html'" style="margin-top: 20px; padding: 10px 20px; font-size: 1em; font-weight: bold; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+        Pindah ke Grafik 2 Variabel
+    </button>
+    <script src="1var.js"></script>
+</body>
+</html>
