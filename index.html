@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grafik Persamaan dan Pertidaksamaan Linear</title>
+    <title>2-Variable Equation Solver</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 </head>
 <body>
-    <h1>Grafik Persamaan dan Pertidaksamaan Linear 2 Variabel</h1>
-    <p>Masukkan persamaan atau pertidaksamaan linear (ax + by = c). Contoh:</p>
-    <pre>
-    2x + 3y = 7
-    3x + 4y >= 10
-    2x - y < 5
-    </pre>
-    <textarea id="equations" rows="5" placeholder="Masukkan persamaan di sini..."></textarea>
-    <br>
-    <button onclick="plotGraph()">Gambarkan Grafik</button>
-    <div class="canvas-container">
-        <canvas id="linearGraph"></canvas>
+    <h1>Grafik Persamaan Pertidaksamaan Linear Dua Variabel</h1>
+    
+    <div class="input-section">
+        <select id="equationType">
+            <option value="equation">PERSAMAAN</option>
+            <option value="inequality">PERTIDAKSAMAAN</option>
+        </select>
+        <input type="text" id="equation1" placeholder="2x + 3y = 10, y = sin(x), y = 2">
+        <input type="text" id="equation2" placeholder="1x - 7y = 9, y = x^2, y = 3x + 7">
+        <button onclick="solveAndGraph()">GAMBARKAN GRAFIK</button>
     </div>
-    <button onclick="window.location.href='1var.html'" style="margin-top: 20px; padding: 10px 20px; font-size: 1em; font-weight: bold; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
-        Pindah ke Grafik 1 Variabel
-    </button>
+    
+    <div id="solution"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <canvas id="graphCanvas" width="600" height="400"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>
